@@ -1,21 +1,27 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 
-import Site from './site';
+
 import Rodape from './componentes/rodape';
 import Cabecalho from './componentes/cabecalho';
 import Inicio from './componentes/inicio';
 import Servicos from './componentes/servicos';
+import Portifolio from './componentes/portifolio';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Cabecalho />
-        <Inicio />
-        <Servicos />
-        <Site />
-        <Rodape />
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          <Cabecalho />
+
+          <Route path="/" exact component={Inicio} />
+          <Route path="/services" component={Servicos} />
+          <Route path="/portifolio" component={Portifolio} />
+          
+          <Rodape />
+        </div>
+      </BrowserRouter>
     );
   }
 }
