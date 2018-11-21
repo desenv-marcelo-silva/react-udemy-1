@@ -5,10 +5,10 @@ import Menu from './menu';
 import PortfolioAdmin from './portifolioadmin';
 
 class Admin extends Component {
-/*     constructor(props) {
+     constructor(props) {
         super(props)
     }
- */
+ 
     render() {
         return (
             <div>

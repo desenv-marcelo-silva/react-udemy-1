@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
 class PortfolioAdmin extends Component {
-/*     constructor(props) {
+    constructor(props) {
         super(props)
     }
- */
+ 
     render() {
         return (
             <h2>Portifólio - Área administrativa</h2>
