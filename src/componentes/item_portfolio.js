@@ -4,10 +4,9 @@ const ItemPortfolio = props => {
     return (
         <div className='col-sm-4'>
             <div className='thumbnail'>
-                <img src='paris.jpg' alt='Paris' width='400' height='300' />
-                <p>{props.key}</p>
-                <p>{props.conteudo.descricao}</p>
+                <img src={props.conteudo.imagem} alt={props.conteudo.titulo} width='120' height='120' />
                 <p>{props.conteudo.titulo}</p>
+                <p>{props.conteudo.descricao}</p>
             </div>
         </div>
     )

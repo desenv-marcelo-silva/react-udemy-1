@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import config, {storage} from '../config/firebase-config'
+
 class PortfolioAdmin extends Component {
     constructor(props) {
         super(props)
