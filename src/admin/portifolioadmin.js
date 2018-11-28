@@ -10,10 +10,25 @@ class PortfolioAdmin extends Component {
     }
 
     gravarPortfolio(event) {
-        console.log('gravar portfolio.');
-        console.log(this.titulo.value);
-        console.log(this.descricao.value);
-        console.log(this.imagem.value);
+        const arquivo = this.imagem.files[0];
+
+        const ref = storage.ref(arquivo.name);
+        ref.put(arquivo)
+            .then(img => {
+                img.ref.getDownloadURL()
+                    .then(downloadUrl => {
+                        const novoRegistroPortfolio = {
+                            titulo: this.titulo.value,
+                            descricao: this.descricao.value,
+                            imagem: downloadUrl
+                        }
+
+                        config.push('portfolio', {
+                            data: novoRegistroPortfolio
+                        });
+                    });
+            });
+        
         event.preventDefault();
     } 
 

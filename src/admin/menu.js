@@ -7,7 +7,7 @@ const Menu = props => {
             <h1>Menu administrativo</h1>
             <div className="list-group">
                 <Link to="#" className="list-group-item list-group-item-action active">Selecione uma opção</Link>
-                <Link to="#" className="list-group-item list-group-item-action">Portifólio</Link>
+                <Link to="/admin/portfolioadmin" className="list-group-item list-group-item-action">Portifólio</Link>
             </div>
         </div>
     )
